@@ -31,7 +31,7 @@
     <div class="game-container">
         <!-- Menu Utama / Screen Awal -->
         <div id="menu-screen" class="screen">
-            <div class="menu-content">
+            <div class="menu-content" style="display: flex; flex-direction: column; align-items: center;">
                 <div class="icon-alquran">📖</div>
                 <h1>Petualangan Hijaiyah</h1>
                 <p>Belajar Huruf Hijaiyah Menarik dengan Musik & Kuis</p>
@@ -44,11 +44,11 @@
                     <p id="loading-text" style="font-size: 13px; color: #fff; margin-top: 6px;">Memuat Game... 0%</p>
                 </div>
 
-                <!-- Tombol Mulai Bermain (Disembunyikan dulu sampai loading penuh) -->
-                <button id="start-btn" class="btn-main" style="display: none; margin-bottom: 10px;">Mulai Bermain</button>
+                <!-- Tombol Mulai Bermain -->
+                <button id="start-btn" class="btn-main" style="display: none; margin-bottom: 12px;">Mulai Bermain</button>
 
-                <!-- Tombol Install PWA (Hanya muncul jika belum diinstal) -->
-                <button id="install-btn" style="display: none; background: rgba(255, 255, 255, 0.2); color: white; border: 2px solid white; padding: 10px 20px; font-size: 0.9rem; font-weight: bold; border-radius: 50px; cursor: pointer; margin-top: 5px; backdrop-filter: blur(5px);">
+                <!-- Tombol Install PWA (Di bawah tombol mulai, ukuran kecil & rapi) -->
+                <button id="install-btn" style="display: none; background: rgba(255, 255, 255, 0.15); color: white; border: 1.5px solid rgba(255, 255, 255, 0.7); padding: 6px 16px; font-size: 0.8rem; font-weight: 600; border-radius: 30px; cursor: pointer; backdrop-filter: blur(5px); transition: all 0.2s;">
                     📲 Install Aplikasi
                 </button>
             </div>
@@ -87,7 +87,6 @@
         window.addEventListener('beforeinstallprompt', (e) => {
             e.preventDefault();
             deferredPrompt = e;
-            // Tampilkan tombol install jika belum terinstal
             if (installBtn) installBtn.style.display = 'inline-block';
         });
 

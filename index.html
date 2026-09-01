@@ -14,17 +14,37 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1564785063766835"
      crossorigin="anonymous"></script>
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app">
-        <!-- Tampilan Utama Game Petualangan Hijaiyah -->
-        <div class="game-container">
-            <h1>Petualangan Hijaiyah</h1>
-            <p>Belajar Huruf Hijaiyah Menarik dengan Musik & Kuis</p>
-            <button id="start-btn" class="btn-primary">Mulai Bermain</button>
+    <div class="game-container">
+        <!-- Header Game -->
+        <div class="game-header">
+            <div class="info-box">Skor: <span id="score">0</span></div>
+            <div class="info-box level-box">Level <span id="level">1</span></div>
         </div>
+
+        <!-- Target Huruf Banner -->
+        <div class="target-banner" id="target-banner">
+            Cari Huruf: <span id="target-letter">-</span>
+        </div>
+
+        <!-- Menu Utama / Screen Awal -->
+        <div id="menu-screen" class="screen">
+            <div class="menu-content">
+                <div class="icon-alquran">📖</div>
+                <h1>Petualangan Hijaiyah</h1>
+                <p>Belajar Huruf Hijaiyah Menarik dengan Musik & Kuis</p>
+                <button id="start-btn" class="btn-main">Mulai Bermain</button>
+            </div>
+        </div>
+
+        <!-- Area Game Utama -->
+        <div id="game-area" style="display: none;"></div>
     </div>
 
     <!-- Main Game Script -->

@@ -23,17 +23,6 @@
 </head>
 <body>
     <div class="game-container">
-        <!-- Header Game -->
-        <div class="game-header">
-            <div class="info-box">Skor: <span id="score">0</span></div>
-            <div class="info-box level-box">Level <span id="level">1</span></div>
-        </div>
-
-        <!-- Target Huruf Banner -->
-        <div class="target-banner" id="target-banner">
-            Cari Huruf: <span id="target-letter">-</span>
-        </div>
-
         <!-- Menu Utama / Screen Awal -->
         <div id="menu-screen" class="screen">
             <div class="menu-content">
@@ -44,9 +33,27 @@
             </div>
         </div>
 
-        <!-- Area Game Utama -->
-        <div id="game-area"></div>
+        <!-- Play Screen (Area Header & Game yang aktif saat mulai) -->
+        <div id="play-screen" class="screen" style="display: none; flex-direction: column; height: 100%;">
+            <!-- Header Game -->
+            <div class="game-header">
+                <div class="info-box">⭐ Skor: <span id="score">0</span></div>
+                <div class="info-box">❤️ Nyawa: <span id="lives">3</span></div>
+                <div class="info-box level-box" id="level-title">Level 1</div>
+            </div>
+
+            <!-- Target Huruf Banner -->
+            <div class="target-banner" id="target-banner">
+                🎯 Target Huruf: <span id="current-target">-</span>
+            </div>
+
+            <!-- Area Game Utama -->
+            <div id="game-area" style="position: relative; flex: 1; overflow: hidden;"></div>
+        </div>
     </div>
+
+    <!-- Background Music Audio element -->
+    <audio id="bg-music" loop src="assets/music.mp3"></audio>
 
     <!-- Main Game Script -->
     <script src="script.js"></script>

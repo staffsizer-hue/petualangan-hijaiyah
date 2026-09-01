@@ -29,7 +29,17 @@
                 <div class="icon-alquran">📖</div>
                 <h1>Petualangan Hijaiyah</h1>
                 <p>Belajar Huruf Hijaiyah Menarik dengan Musik & Kuis</p>
-                <button id="start-btn" class="btn-main">Mulai Bermain</button>
+                
+                <!-- Elemen Loading Bar -->
+                <div id="loading-container" style="width: 80%; margin: 20px auto; text-align: center;">
+                    <div style="background: rgba(255,255,255,0.3); border-radius: 10px; overflow: hidden; height: 12px; padding: 2px;">
+                        <div id="loading-bar" style="width: 0%; height: 100%; background: #ffffff; border-radius: 8px; transition: width 0.1s linear;"></div>
+                    </div>
+                    <p id="loading-text" style="font-size: 13px; color: #fff; margin-top: 8px;">Memuat Game... 0%</p>
+                </div>
+
+                <!-- Tombol Mulai Bermain (Disembunyikan dulu sampai loading penuh) -->
+                <button id="start-btn" class="btn-main" style="display: none;">Mulai Bermain</button>
             </div>
         </div>
 
@@ -52,7 +62,7 @@
         </div>
     </div>
 
-    <!-- Background Music Audio element (disesuaikan dengan backsound.mp3) -->
+    <!-- Background Music Audio element -->
     <audio id="bg-music" loop src="assets/backsound.mp3"></audio>
 
     <!-- Main Game Script -->

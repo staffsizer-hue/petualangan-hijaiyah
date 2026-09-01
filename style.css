@@ -130,11 +130,11 @@ body {
     background: transparent;
 }
 
-/* Style Huruf Hijaiyah Jatuh (Besar, Terang, Kuning Emas, Goyang Halus) */
+/* Style Huruf Hijaiyah Jatuh (DIPERBESAR jadi 5.2rem supaya makin jelas buat anak-anak) */
 .falling-letter {
     position: absolute;
     color: #ffeb3b;
-    font-size: 4rem;
+    font-size: 5.2rem;
     font-weight: 900;
     text-shadow: 0 0 15px rgba(255, 235, 59, 0.9), 0 2px 5px rgba(0, 0, 0, 0.5);
     display: flex;
@@ -145,10 +145,10 @@ body {
     animation: sway 1.5s ease-in-out infinite alternate;
 }
 
-/* Style Hantu Ramah (Ukuran Besar & Terang) */
+/* Style Hantu Ramah (DIPERBESAR juga jadi 5.2rem) */
 .friendly-ghost {
     position: absolute;
-    font-size: 4rem;
+    font-size: 5.2rem;
     display: flex;
     justify-content: center;
     align-items: center;

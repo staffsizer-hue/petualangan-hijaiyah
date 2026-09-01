@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petualangan Hijaiyah - Belajar Mengaji Ceria</title>
+    
+    <!-- Konfigurasi PWA & Mobile Support -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#13261e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icon-512.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Google AdSense Script -->
+    <meta name="google-adsense-account" content="ca-pub-1564785063766835">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1564785063766835" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Elemen Audio Background (Musik Latar) -->
+    <audio id="bg-music" loop>
+        <source src="assets/backsound.mp3" type="audio/mp3">
+        Browser kamu tidak mendukung pemutar audio.
+    </audio>
+
+    <div class="game-container">
+        <!-- MENU UTAMA -->
+        <div id="menu-screen" class="screen">
+            <div class="menu-content">
+                <div class="icon-alquran">📖✨</div>
+                <h1>Petualangan Hijaiyah</h1>
+                <p>Belajar Huruf Hijaiyah Bersama Arfan dengan Seru & Ceria!</p>
+                <button id="start-btn" class="btn-main">Mulai Bermain 🚀</button>
+            </div>
+        </div>
+
+        <!-- LAYAR PERMAINAN -->
+        <div id="play-screen" class="screen" style="display: none;">
+            <header class="game-header">
+                <div class="info-box">⭐ Skor: <span id="score">0</span></div>
+                <div class="info-box">❤️ Nyawa: <span id="lives">3</span></div>
+                <div class="info-box level-box"><span id="level-title">Level 1</span></div>
+            </header>
+
+            <div class="target-banner">
+                🎯 Target Huruf: <span id="current-target" style="color: #ffeb3b; font-weight: bold;">Alif ( ا )</span>
+            </div>
+
+            <!-- Area tempat huruf & hantu jatuh -->
+            <div id="game-area"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

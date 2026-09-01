@@ -1,3 +1,25 @@
+// --- FITUR LOADING BAR HALAMAN AWAL ---
+document.addEventListener("DOMContentLoaded", () => {
+    const loadingBar = document.getElementById("loading-bar");
+    const loadingText = document.getElementById("loading-text");
+    const loadingContainer = document.getElementById("loading-container");
+    const startBtn = document.getElementById("start-btn");
+
+    let progress = 0;
+    const interval = setInterval(() => {
+        progress += 2; // Kecepatan loading
+        if (loadingBar) loadingBar.style.width = progress + "%";
+        if (loadingText) loadingText.innerText = `Memuat Game... ${progress}%`;
+
+        if (progress >= 100) {
+            clearInterval(interval);
+            if (loadingContainer) loadingContainer.style.display = "none";
+            if (startBtn) startBtn.style.display = "inline-block";
+        }
+    }, 30);
+});
+
+// --- KODINGAN UTAMA GAME ---
 const startBtn = document.getElementById('start-btn');
 const menuScreen = document.getElementById('menu-screen');
 const playScreen = document.getElementById('play-screen');

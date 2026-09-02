@@ -206,7 +206,9 @@ function spawnItem() {
                 gameArea.innerHTML = '';
 
                 if (currentLevel < levels.length) {
-                    const nextLevelData = levels[currentLevel]; 
+                    // Naikkan level terlebih dahulu agar aman dan akurat
+                    currentLevel++; 
+                    const nextLevelData = levels[currentLevel - 1]; 
                     
                     bicara("Alhamdulillah, lanjut ke level berikutnya!");
 
@@ -259,7 +261,6 @@ function tampilkanPopupLanjut(nextLevelData) {
     document.getElementById('btn-lanjut').addEventListener('click', function() {
         bicara(`Bismillahirrahmanirrahim, kita mulai cari huruf ${nextLevelData.nama}!`);
         
-        currentLevel++;
         updateBoard();
         popup.remove();
         isPaused = false;

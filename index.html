@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petualangan Hijaiyah - Belajar Huruf Hijaiyah Menarik dengan Musik & Kuis</title>
     
-    <!-- Meta Tags untuk Preview Link di WhatsApp, Facebook, dll (Pakai URL Absolut) -->
+    <!-- Meta Tags untuk Preview Link di WhatsApp, Facebook, dll -->
     <meta property="og:title" content="Petualangan Hijaiyah - Belajar Ngaji Ceria">
     <meta property="og:description" content="Serunya belajar huruf Hijaiyah dari Alif sampai Ya ditemani musik ceria dan kuis interaktif!">
     <meta property="og:image" content="https://petualangan-hijaiyah-uhhy.vercel.app/icon-512.png">
@@ -27,31 +27,83 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- CSS Tambahan untuk Footer Korporat & Konten Agar Lolos AdSense -->
+    <style>
+        .adsense-content-box {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 14px;
+            margin: 15px auto 5px auto;
+            text-align: left;
+            max-width: 90%;
+            backdrop-filter: blur(5px);
+        }
+        .adsense-content-box h3 {
+            font-size: 0.9rem;
+            color: #ffd700;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+        .adsense-content-box p {
+            font-size: 0.75rem;
+            color: #e2e8f0;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+        .company-footer {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #cbd5e1;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 10px;
+        }
+        .company-footer a {
+            color: #60a5fa;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
     <div class="game-container">
         <!-- Menu Utama / Screen Awal -->
         <div id="menu-screen" class="screen">
-            <div class="menu-content" style="display: flex; flex-direction: column; align-items: center;">
-                <div class="icon-alquran">📖</div>
-                <h1>Petualangan Hijaiyah</h1>
-                <p>Belajar Huruf Hijaiyah Menarik dengan Musik & Kuis</p>
+            <div class="menu-content" style="display: flex; flex-direction: column; align-items: center; overflow-y: auto; max-height: 95vh; padding: 10px;">
+                <div class="icon-alquran" style="font-size: 2.5rem; margin-bottom: 5px;">📖</div>
+                <h1 style="font-size: 1.5rem; text-align: center;">Petualangan Hijaiyah</h1>
+                <p style="font-size: 0.85rem; text-align: center;">Belajar Huruf Hijaiyah Menarik dengan Musik & Kuis</p>
                 
                 <!-- Elemen Loading Bar -->
-                <div id="loading-container" style="width: 80%; margin: 15px auto; text-align: center;">
+                <div id="loading-container" style="width: 80%; margin: 10px auto; text-align: center;">
                     <div style="background: rgba(255,255,255,0.3); border-radius: 10px; overflow: hidden; height: 12px; padding: 2px;">
                         <div id="loading-bar" style="width: 0%; height: 100%; background: #ffffff; border-radius: 8px; transition: width 0.1s linear;"></div>
                     </div>
-                    <p id="loading-text" style="font-size: 13px; color: #fff; margin-top: 6px;">Memuat Game... 0%</p>
+                    <p id="loading-text" style="font-size: 11px; color: #fff; margin-top: 4px;">Memuat Game... 0%</p>
                 </div>
 
                 <!-- Tombol Mulai Bermain -->
-                <button id="start-btn" class="btn-main" style="display: none; margin-bottom: 12px;">Mulai Bermain</button>
+                <button id="start-btn" class="btn-main" style="display: none; margin-bottom: 8px;">Mulai Bermain</button>
 
                 <!-- Tombol Install PWA -->
-                <button id="install-btn" style="display: none; background: rgba(255, 255, 255, 0.15); color: white; border: 1.5px solid rgba(255, 255, 255, 0.7); padding: 6px 16px; font-size: 0.8rem; font-weight: 600; border-radius: 30px; cursor: pointer; backdrop-filter: blur(5px); transition: all 0.2s;">
+                <button id="install-btn" style="display: none; background: rgba(255, 255, 255, 0.15); color: white; border: 1.5px solid rgba(255, 255, 255, 0.7); padding: 6px 16px; font-size: 0.75rem; font-weight: 600; border-radius: 30px; cursor: pointer; backdrop-filter: blur(5px); transition: all 0.2s; margin-bottom: 10px;">
                     📲 Install Aplikasi
                 </button>
+
+                <!-- Kotak Artikel & Tentang Pengembang (Penting untuk Menghilangkan "Low Value Content" Google AdSense) -->
+                <div class="adsense-content-box">
+                    <h3>Tentang Platform & Edukasi</h3>
+                    <p>
+                        <strong>Petualangan Hijaiyah</strong> adalah media pembelajaran interaktif berbasis web dan aplikasi yang dirancang khusus untuk membantu anak-anak mengenal, membaca, dan menghafal huruf-huruf Hijaiyah dari Alif sampai Ya secara menyenangkan melalui musik ceria dan kuis edukatif.
+                    </p>
+                    <div class="company-footer">
+                        Aplikasi edukasi resmi dikembangkan oleh<br>
+                        <a href="https://aplfixdigital.lovable.app" target="_blank">PT. APLIFIX DIGITAL INDONESIA</a><br>
+                        <span style="font-size: 0.65rem; color: #94a3b8;">&copy; 2026 PT. APLIFIX DIGITAL INDONESIA. All Rights Reserved.</span>
+                    </div>
+                </div>
             </div>
         </div>
 
